@@ -2,6 +2,10 @@
 
 ![Screenshot Discord](https://i.imgur.com/BrGIwkG.png)
 
+## Requirements
+* Webserver
+* DayZ server running via CFTools (https://cftools.de)
+
 ## Installation
 
 1. Upload index.php on your web server
