@@ -15,13 +15,14 @@ if(strcmp($signature, $webhook->signature) == 0) {
         http_response_code(200);
         echo "OK";
 		
-		/*
-			Send Killmessage to Discord
-		*/
-		if($webhook->event == "player_kill") {
-			$messageContent = ':skull: **' . $webhook->payload->names->murderer . '**' . ' killed ' . '**' . $webhook->payload->names->victim . '**' . ' with ' . '**' . $webhook->payload->weapon . '**' . ' (' . $webhook->payload->distance . 'm)';
-			postToDiscord($messageContent);
-		}
+	/*
+	Send Killmessage to Discord
+	*/
+	if($webhook->event == "player_kill") {
+		$messageContent = ':skull: **' . $webhook->payload->names->murderer . '**' . ' killed ' . '**' . $webhook->payload->names->victim . '**' . ' with ' . '**' . $webhook->payload->weapon . '**' . ' (' . $webhook->payload->distance . 'm)';
+		postToDiscord($messageContent);
+	}
+	
         return "OK";
 } else {
         echo "BAD";
@@ -30,7 +31,7 @@ if(strcmp($signature, $webhook->signature) == 0) {
 
 function postToDiscord($message)
 {
-  $json_data = json_encode(["content" => $message, "username" => $discordName]);
+	$json_data = json_encode(["content" => $message, "username" => $discordName]);
 	$ch = curl_init($discordHook);
 	curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
 	curl_setopt( $ch, CURLOPT_POST, 1);
