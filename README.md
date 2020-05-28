@@ -8,7 +8,8 @@
 2. Change Secret to your CFTools-Secret
 3. Change Discord-Webhook URL to your Webhook-URL 
 4. Update URL on your CFTools Webhook-Widget
-5. Done
+5. Change Discord name to your Discord-WebHook name
+6. Done
 ##
 
 #### Where do I find my CFTools-Secret?
@@ -30,3 +31,4 @@
 3. Create a new WebHook
 4. Copy your WebHook-URL
 5. Paste your URL into the script
+6. Change Discord name to your Discord-WebHook name
