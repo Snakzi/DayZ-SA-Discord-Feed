@@ -32,3 +32,6 @@
 4. Copy your WebHook-URL
 5. Paste your URL into the script
 6. Change Discord name to your Discord-WebHook name
+
+
+DO NOT SELL THIS SCRIPT OR CLAIM AS YOURS! THIS PLUG-IN IS FREE, IF YOU EVER SEE THIS PLUG-IN BEING SOLD, CONTACT ME!
