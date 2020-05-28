@@ -11,7 +11,7 @@
 5. Done
 ##
 
-#### Where do I find my CFTool-Secret?
+#### Where do I find my CFTools-Secret?
 1. Open your CFTools ControlPanel
 2. Click on your Server
 3. Click on "Server"
