@@ -4,6 +4,7 @@
 
 ## Requirements
 * Webserver
+* CFDZPlugin (Serverside)
 * DayZ server running via CFTools (https://cftools.de)
 
 ## Installation
