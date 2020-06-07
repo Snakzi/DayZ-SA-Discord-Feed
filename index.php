@@ -5,24 +5,20 @@ $payload = preg_replace('/:\s*(\-?\d+(\.\d+)?([e|E][\-|\+]\d+)?)/', ': "$1"', $p
 $webhook = json_decode($payload);
 
 $invoked = $webhook->invoked;
-$discordHook = ""; //Discord-WebHook URL
-$secret = ""; // WebHook-Secret
-$discordName = ""; //Discord-WebHook name
+$secret = ""; // SIGNATURE
 
 $signature = hash('sha256',  $invoked.":".$secret);
 
 if(strcmp($signature, $webhook->signature) == 0) {
         http_response_code(200);
-        echo "OK";
-		
+	echo "OK";	
 	/*
-	Send Killmessage to Discord
+		Send Killmessage to Discord
 	*/
 	if($webhook->event == "player_kill") {
 		$messageContent = ':skull: **' . $webhook->payload->names->murderer . '**' . ' killed ' . '**' . $webhook->payload->names->victim . '**' . ' with ' . '**' . $webhook->payload->weapon . '**' . ' (' . $webhook->payload->distance . 'm)';
 		postToDiscord($messageContent);
 	}
-	
         return "OK";
 } else {
         echo "BAD";
@@ -31,8 +27,8 @@ if(strcmp($signature, $webhook->signature) == 0) {
 
 function postToDiscord($message)
 {
-	$json_data = json_encode(["content" => $message, "username" => $discordName]);
-	$ch = curl_init($discordHook);
+    $json_data = json_encode(["content" => $message, "username" => "German Survival Camp"]); //CHANGE NAME OF BOT
+	$ch = curl_init("https://discordapp.com/api/webhooks/715289106489540669/13QuW1wuHqtdiy5lYOslRzmAJCaF4Ukf0nMyfpPF4q276mSDqpoaRA9eohwn3akWewhA"); //DISCORD URL
 	curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-type: application/json'));
 	curl_setopt( $ch, CURLOPT_POST, 1);
 	curl_setopt( $ch, CURLOPT_POSTFIELDS, $json_data);
