@@ -16,7 +16,7 @@ if(strcmp($signature, $webhook->signature) == 0) {
 		Send Killmessage to Discord
 	*/
 	if($webhook->event == "player_kill") {
-		$messageContent = ':skull: **' . $webhook->payload->names->murderer . '**' . ' killed ' . '**' . $webhook->payload->names->victim . '**' . ' with ' . '**' . $webhook->payload->weapon . '**' . ' (' . $webhook->payload->distance . 'm)';
+		$messageContent = ':skull: **' . $webhook->payload->names->murderer . '**' . ' killed ' . '**' . $webhook->payload->names->victim . '**' . ' with ' . '**' . $webhook->payload->weapon . '**' . ' (' . round($webhook->payload->distance, 2) . 'm)';
 		postToDiscord($messageContent);
 	}
         return "OK";
