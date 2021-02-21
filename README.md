@@ -38,5 +38,12 @@
 5. Paste your URL into the script
 6. Change Discord name to your Discord-WebHook name
 
+##
+
+#### Images for easier understanding
+
+![Screenshot CFTools](https://i.imgur.com/y2hDsvl.png)
+![Screenshot Discord2](https://i.imgur.com/xdZD6Sn.png)
+
 
 DO NOT SELL THIS SCRIPT OR CLAIM AS YOURS! THIS PLUG-IN IS FREE, IF YOU EVER SEE THIS PLUG-IN BEING SOLD, CONTACT ME!
