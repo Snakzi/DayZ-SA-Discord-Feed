@@ -1,3 +1,7 @@
+# THIS PLUGIN IS NOT BEING WORKED ON ANYMORE.
+
+
+
 # DayZ-SA-Discord-Feed
 
 ![Screenshot Discord](https://i.imgur.com/BrGIwkG.png)
